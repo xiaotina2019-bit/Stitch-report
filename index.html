@@ -482,6 +482,10 @@ function readFileAsDataURL(file) {
 
 function setupDropZone(zone, input, callback) {
 
+  zone.addEventListener("click", () => {
+    input.click();
+  });
+
   zone.addEventListener("dragover", e => {
 
     e.preventDefault();
@@ -521,8 +525,6 @@ function setupDropZone(zone, input, callback) {
     input.value = "";
   });
 }
-
-
 /* =========================================================
    ADD ORDER
 ========================================================= */
